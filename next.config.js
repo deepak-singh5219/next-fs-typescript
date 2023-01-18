@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env:{
-    MONGODB_URL: "mongodb://localhost:27017/testDB"
+    MONGODB_URL: "mongodb+srv://deepak_singh_5219:singhdeepak@cluster0.r3b1b.mongodb.net/testDB"
   }
 }
 

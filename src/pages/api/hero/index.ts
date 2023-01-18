@@ -37,7 +37,7 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         try {
              
             const data = req.body;
-            if(!data) res.status(401).json({
+            if(!data) res.status(400).json({
                 success:false,
                 message: 'no data received'
             })
@@ -49,11 +49,11 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
                     message:'data not pushed to database'
                 })
 
+            }
                 res.status(200).json({
                     success:true,
                     hero
                 })
-            }
             
         } catch (error) {
             res.status(400).json({
