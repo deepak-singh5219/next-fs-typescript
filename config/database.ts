@@ -5,7 +5,7 @@ let MONGODB_URL = process.env.MONGODB_URL;
 let isConnected:number = 0;
 
 
-export default (async () => {
+const dbConnect = async () => {
 
     if(isConnected){
         return;
@@ -14,8 +14,7 @@ export default (async () => {
 const db = await mongoose.connect(MONGODB_URL as string)
 isConnected = db.connections[0].readyState;
 
-}); // iife - immediately invoked function expressions
+};
 
-
-
+export default dbConnect;
 
