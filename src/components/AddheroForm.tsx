@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 import Router from 'next/router'
+import { toast } from 'react-toastify';
+
 
 
 const AddheroForm = () => {
-
     const [heroForm,setHeroForm] = useState({
         superHero:'',
         realName:''
@@ -25,15 +26,18 @@ const AddheroForm = () => {
                     'Content-Type': 'application/json'
                   }
                }) 
+               toast.success("Hero added successfully!");
                Router.push('/');
+               
         } catch (error) {
             console.log(error);
+            toast.error("Bad Request!")
         }
 
     }
   return (
     <div>
-        <div className="block border border-2 p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <div className=" mt-10 block border border-2 p-6 rounded-lg shadow-lg bg-white max-w-sm">
   <form onSubmit={handleFormSubmit}>
     <div className="form-group mb-6">
       <label className="form-label inline-block mb-2 text-gray-700">Superhero Name</label>

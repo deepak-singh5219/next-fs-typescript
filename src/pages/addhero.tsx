@@ -1,10 +1,9 @@
 import AddheroForm from '@/components/AddheroForm'
-import {useState} from 'react'
 
 
 const addhero = () => {
   return (
-    <div>
+    <div className='flex items-center justify-center'>
         <AddheroForm/>
     </div>
   )
