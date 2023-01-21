@@ -12,7 +12,23 @@ const Navbar = () => {
       </svg>
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
-    <Link href="/addhero" className="inline-flex items-center bg-slate-500 text-white bg-gray-100 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">Add New Identity</Link>
+    <Link href="/addhero" className="
+      px-6
+      py-2.5
+      bg-blue-600
+      text-white
+      font-medium
+      text-xs
+      leading-tight
+      uppercase
+      rounded
+      shadow-md
+      hover:bg-blue-700 hover:shadow-lg
+      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-blue-800 active:shadow-lg
+      transition
+      duration-150
+      ease-in-out">Add New Identity</Link>
   </div>
 </header>
     </div>
